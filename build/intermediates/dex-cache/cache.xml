@@ -2,20 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/Applications/Android Studio 3.app/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-682eb8d19be44ebd1f3b589298f6038e8b1812e6.jar" />
-    </item>
-    <item
-        jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/classes-06f69fe2f9764c672596628d332b8cab3a305340.jar" />
-    </item>
-    <item
         jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/exploded-aar/com.android.support/support-v13/22.2.1/jars/libs/internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -30,11 +16,11 @@
         <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-0d6f2bb00d776d90cf17a619eb6334ba823f691b.jar" />
     </item>
     <item
-        jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/libs/commons-io-2.4.jar"
+        jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
-        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/commons-io-2.4-0a3e71233000ecdadb81f617651e7f7b596f5677.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/classes-06f69fe2f9764c672596628d332b8cab3a305340.jar" />
     </item>
     <item
         jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/exploded-aar/com.android.support/support-v13/22.2.1/jars/classes.jar"
@@ -42,6 +28,20 @@
         revision="21.1.2"
         sha1="c4caf832116bca1f2e140bf1fb600e2edd190837">
         <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/classes-bf7de93d3922bdd332e019c0672333952824c624.jar" />
+    </item>
+    <item
+        jar="/Applications/AndroidStudio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-3f121c03d1338d466d1057e5cfc2002f08744a8b.jar" />
+    </item>
+    <item
+        jar="/Users/jmejias14/AndroidStudioProjects/mememaker/app/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/Users/jmejias14/AndroidStudioProjects/mememaker/app/build/intermediates/pre-dexed/debug/commons-io-2.4-0a3e71233000ecdadb81f617651e7f7b596f5677.jar" />
     </item>
 
 </items>
