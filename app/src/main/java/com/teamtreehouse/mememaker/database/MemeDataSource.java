@@ -18,16 +18,16 @@ import java.util.Date;
 public class MemeDataSource {
 
     private Context mContext;
-    private MemeSQLiteHelper mMemeSqlLiteHelper;
+    private MemeSQLiteHelper mMemeSqliteHelper;
 
     public MemeDataSource(Context context) {
 
         mContext = context;
-        mMemeSqlLiteHelper = new MemeSQLiteHelper(context);
+        mMemeSqliteHelper = new MemeSQLiteHelper(context);
     }
 
     private SQLiteDatabase open() {
-        return mMemeSqlLiteHelper.getWritableDatabase();
+        return mMemeSqliteHelper.getWritableDatabase();
     }
 
     private void close(SQLiteDatabase database) {
@@ -74,7 +74,7 @@ public class MemeDataSource {
                         getStringFromColumnName(cursor, MemeSQLiteHelper.COLUMN_MEME_NAME),
                         null);
                 memes.add(meme);
-            } while(cursor.moveToNext());
+            }while(cursor.moveToNext());
         }
         cursor.close();
         close(database);
@@ -88,7 +88,7 @@ public class MemeDataSource {
             ArrayList<MemeAnnotation> annotations = new ArrayList<MemeAnnotation>();
             Cursor cursor = database.rawQuery(
                     "SELECT * FROM " + MemeSQLiteHelper.ANNOTATIONS_TABLE +
-                            " WHERE MEME ID = " + meme.getId(), null);
+                            " WHERE MEME_ID = " + meme.getId(), null);
 
             if(cursor.moveToFirst()) {
                 do {
@@ -124,11 +124,11 @@ public class MemeDataSource {
             updateAnnotations.put(MemeSQLiteHelper.COLUMN_FOREIGN_KEY_MEME, meme.getId());
             updateAnnotations.put(MemeSQLiteHelper.COLUMN_ANNOTATION_COLOR, annotation.getColor());
 
-            if (annotation.hasBeenSaved()) {
+            if(annotation.hasBeenSaved()) {
                 database.update(MemeSQLiteHelper.ANNOTATIONS_TABLE,
                         updateAnnotations,
                         String.format("%s=%d", BaseColumns._ID, annotation.getId())
-                , null);
+                        ,null);
             } else {
                 database.insert(MemeSQLiteHelper.ANNOTATIONS_TABLE,
                         null,
@@ -159,7 +159,7 @@ public class MemeDataSource {
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_NAME, meme.getName());
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_ASSET, meme.getAssetLocation());
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_CREATE_DATE, new Date().getTime());
-        long memeId = database.insert(MemeSQLiteHelper.MEMES_TABLE, null, memeValues);
+        long memeID = database.insert(MemeSQLiteHelper.MEMES_TABLE, null, memeValues);
 
         for (MemeAnnotation annotation : meme.getAnnotations()) {
             ContentValues annotationValues = new ContentValues();
@@ -167,7 +167,7 @@ public class MemeDataSource {
             annotationValues.put(MemeSQLiteHelper.COLUMN_ANNOTATION_TITLE, annotation.getTitle());
             annotationValues.put(MemeSQLiteHelper.COLUMN_ANNOTATION_X, annotation.getLocationX());
             annotationValues.put(MemeSQLiteHelper.COLUMN_ANNOTATION_Y, annotation.getLocationY());
-            annotationValues.put(MemeSQLiteHelper.COLUMN_FOREIGN_KEY_MEME, memeId);
+            annotationValues.put(MemeSQLiteHelper.COLUMN_FOREIGN_KEY_MEME, memeID);
 
             database.insert(MemeSQLiteHelper.ANNOTATIONS_TABLE, null, annotationValues);
         }
